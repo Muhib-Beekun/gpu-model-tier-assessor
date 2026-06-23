@@ -26,10 +26,14 @@ PowerShell tool for local AI inference planning and validation across consumer t
 ## Requirements
 
 - Windows PowerShell 5.1+ or PowerShell 7+
+  - PowerShell: https://learn.microsoft.com/powershell/
 - NVIDIA driver with nvidia-smi on PATH
+  - NVIDIA Drivers: https://www.nvidia.com/Download/index.aspx
+  - nvidia-smi reference: https://developer.nvidia.com/system-management-interface
 - Optional for runtime probes and benchmarks:
-  - Ollama
-  - Docker with NVIDIA Container Toolkit support
+  - Ollama: https://ollama.com/download
+  - Docker Desktop: https://docs.docker.com/desktop/
+  - NVIDIA Container Toolkit: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 
 ## Usage
 
