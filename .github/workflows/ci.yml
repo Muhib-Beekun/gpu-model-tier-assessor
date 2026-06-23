@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: ["master", "main"]
+  pull_request:
+
+jobs:
+  powershell-parse:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Parse PowerShell Script
+        shell: pwsh
+        run: |
+          $errors = @()
+          $null = [System.Management.Automation.Language.Parser]::ParseFile("gpu-model-tier-assessor.ps1", [ref]$null, [ref]$errors)
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            throw "PowerShell parse errors detected"
+          }
+          Write-Host "PowerShell syntax check passed"

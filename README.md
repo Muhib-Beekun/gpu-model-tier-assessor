@@ -100,3 +100,15 @@ It also saves a JSON report with:
 - Benchmarks only run for models installed in local Ollama.
 - Size-fit checks are heuristic, not guaranteed. Final fit depends on context length, quantization, KV cache, and runtime overhead.
 - Mixed GPU systems can run into sharding bottlenecks on the smaller card.
+
+## License
+
+This project is licensed under the MIT License.
+See LICENSE for details.
+
+## Repository Standards
+
+- CONTRIBUTING.md for contribution workflow.
+- SECURITY.md for vulnerability reporting.
+- .editorconfig for consistent formatting defaults.
+- .github/workflows/ci.yml for PowerShell syntax validation on pull requests.
